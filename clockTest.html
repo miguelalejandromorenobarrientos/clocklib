@@ -1,0 +1,380 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Javascript Clocklib Library Test</title>
+    <meta name="description" content="Clocklib, a Javascript library to put customizable analog/digital clocks in a page">
+    <meta name="keywords" content="javascript, clock, Clocklib, generator, html5, Miguel Alejandro Moreno Barrientos">
+    <meta name="author" content="Miguel Alejandro Moreno Barrientos">
+    <meta name="publisher" content="Miguel Alejandro Moreno Barrientos" />
+    <meta name="copyright" content="Miguel Alejandro Moreno Barrientos" />
+    <meta name="robots" content="index, nofollow">
+    <meta name="distribution" content="Global" />
+    <meta name="audience" content="all" />
+    
+    <script src="clocklib_v0.1.js"/></script>
+    <script src="clockTest.js"/></script>
+    
+    <link rel="stylesheet" href="clockTest.css"/>
+    
+    <link rel="shortcut icon" href="clockTestIco.png">
+</head>
+
+<body>
+
+<script type='text/javascript' src='http://dstats.net/js/dstracker.js'></script>
+<a href='https://dl.dropboxusercontent.com/u/4135903/ClockLib/clockTest.html' onclick='return dstatstracker(this);'></a>
+
+<h1>Javascript Clocklib Library Test</h1>
+
+<p>
+	Clocklib ia a Javascript library that implements a digital/analog clock for specified canvas elements. 
+    This library is implemented for HTML5 <img width="24" height="24" src="HTML5_Logo_256.png" alt="html5 logo"/>.
+</p>
+<p>
+	Download <a href="clocklib_v0.1.js" download><i>clocklib_v0.1.js</i></a>
+</p>
+<p>
+	<small>Author: <i>Miguel Alejandro Moreno Barrientos</i>, Copyleft 2015</small>
+</p>
+
+<hr/>
+
+<table id="samplesTable">
+	<tr>
+    	<th>Description</th>
+        <th>Sample</th>
+        <th>HTML5 Code</th>
+	</tr>
+    <tr>
+    	<td>Default clock without attributes</td>
+    	<td>
+            <canvas class="clockClass" width="300" height="300">
+                Canvas not sopported. Update browser.
+            </canvas>
+        </td>
+        <td>
+        	<pre><code>
+&lt;canvas class="clockClass" width="300" height="300"&gt;
+    Canvas not sopported. Update browser.
+&lt;/canvas&gt;
+            </code></pre>
+        </td>
+    </tr>
+    <tr>
+    	<td>Default digital clock without attributes</td>
+    	<td>
+            <canvas class="clockClass" width="300" height="100"
+            	data-type="digital">
+                Canvas not sopported. Update browser.
+            </canvas>
+        </td>
+        <td>
+        	The same as above with <i><strong>data-type="digital"</strong></i> and <i><strong>height="100"</strong></i>
+        </td>
+    </tr>
+    <tr>
+    	<td>Analog clock with custom colors</td>
+    	<td>
+            <canvas class="clockClass" width="300" height="300"
+            	data-color="blue"
+                data-background="pink">
+                Canvas not sopported. Update browser.
+            </canvas>
+        </td>
+        <td>
+        	<pre><code>
+&lt;canvas class="clockClass" width="300" height="300"
+    data-color="blue"
+    data-background="pink"&gt;
+    Canvas not sopported. Update browser.
+&lt;/canvas&gt;
+            </code></pre>
+        </td>
+    </tr>
+    <tr>
+    	<td>The same as above in digital</td>
+    	<td>
+            <canvas class="clockClass" width="300" height="100"
+            	data-color="blue"
+                data-background="pink"
+            	data-type="digital">
+                Canvas not sopported. Update browser.
+            </canvas>
+        </td>
+        <td>
+        	The same as above with <i><strong>data-type="digital"</strong></i> and <i><strong>height="100"</strong></i>
+        </td>
+    </tr>
+    <tr>
+    	<td>Analog clock with golden gradient background, circles as ticks and roman numerals with custom font-family</td>
+    	<td>
+            <canvas class="clockClass" width="300" height="300"
+                data-ticks="circles";
+                data-color="#882"
+                data-background="black, #ee5, black"
+                data-type="analog"
+                data-font-family="Andalus"
+                data-numerals="roman">
+                Canvas not sopported. Update browser.
+            </canvas>
+        </td>
+        <td>
+        	<pre><code>
+&lt;canvas class="clockClass" width="300" height="300"
+    data-ticks="circles";
+    data-color="#882"
+    data-background="black, #ee5, black"
+    data-type="analog"
+    data-font-family="Andalus"
+    data-numerals="roman"&gt;
+    Canvas not sopported. Update browser.
+&lt;/canvas&gt;
+			</code></pre>
+        </td>
+    </tr>
+    <tr>
+    	<td>The same as above in digital</td>
+    	<td>
+            <canvas class="clockClass" width="300" height="100"
+                data-ticks="circles";
+                data-color="#882"
+                data-background="black, #ee5, black"
+                data-type="digital"
+                data-font-family="Andalus"
+                data-numerals="roman">
+                Canvas not sopported. Update browser.
+            </canvas>
+        </td>
+        <td>
+        	The same as above with <i><strong>data-type="digital"</strong></i> and <i><strong>height="100"</strong></i>
+        </td>
+    </tr>
+    <tr>
+    	<td>Analog clock in a non-squared canvas with arabic numerals</td>
+    	<td>
+            <canvas class="clockClass" width="300" height="200"
+                data-ticks="lines";
+                data-color="blue"
+                data-type="analog"
+                data-background="cyan, yellow"
+                data-numerals="arabic">    
+                Canvas not sopported. Update browser.
+            </canvas>
+        </td>
+        <td>
+        	<pre><code>
+&lt;canvas class="clockClass" width="300" height="300"
+    data-ticks="circles";
+    data-color="#882"
+    data-background="black, #ee5, black"
+    data-type="analog"
+    data-font-family="Andalus"
+    data-numerals="roman"&gt;
+    Canvas not sopported. Update browser.
+&lt;/canvas&gt;
+			</code></pre>
+        </td>
+    </tr>
+    <tr>
+    	<td>The same as above in digital</td>
+    	<td>
+            <canvas class="clockClass" width="300" height="100"
+                data-ticks="lines";
+                data-color="blue"
+                data-type="digital"
+                data-background="cyan, yellow"
+                data-numerals="arabic">    
+                Canvas not sopported. Update browser.
+            </canvas>
+        </td>
+        <td>
+        	The same as above with <i><strong>data-type="digital"</strong></i> and <i><strong>height="100"</strong></i>
+        </td>
+    </tr>
+    <tr>
+    	<td>Analog clock with horizontal gradient and no ticks</td>
+    	<td>
+            <canvas class="clockClass" width="300" height="300"
+            	data-ticks="none"
+                data-color="rgba(255,255,255,0.5)"
+                data-background="black, gray, black, gray, black"
+                data-gradient="0,0,0,300">
+                Canvas not sopported. Update browser.
+            </canvas>
+        </td>
+        <td>
+        	<pre><code>
+&lt;canvas class="clockClass" width="300" height="300"
+    data-ticks="none"
+    data-color="rgba(255,255,255,0.5)"
+    data-background="black, gray, black, gray, black"
+    data-gradient="0,0,0,300"&gt;
+    Canvas not sopported. Update browser.
+&lt;/canvas&gt;
+			</code></pre>
+        </td>
+    </tr>
+    <tr>
+    	<td>The same as above in digital</td>
+    	<td>
+            <canvas class="clockClass" width="300" height="100"
+            	data-ticks="none"
+                data-color="rgba(255,255,255,0.5)"
+                data-background="black, gray, black, gray, black"
+                data-type="digital"
+                data-gradient="0,0,0,100">
+                Canvas not sopported. Update browser.
+            </canvas>
+        </td>
+        <td>
+        	The same as above with <i><strong>data-type="digital"</strong></i> and <i><strong>height="100"</strong></i>
+        </td>
+    </tr>
+    <tr>
+    	<td>Analog clock with all attributes</td>
+    	<td>
+            <canvas class="clockClass" width="300" height="300"
+            	data-ticks="circles"
+                data-outer-color="green"
+                data-color="#ff5"
+                data-background="black, red, green, blue, black"
+                data-numerals="roman"
+                data-font-family="comic sans ms"
+                data-type="analog"
+                data-gradient="0,0,0,300">
+                Canvas not sopported. Update browser.
+            </canvas>
+        </td>
+        <td>
+        	<pre><code>
+&lt;canvas class="clockClass" width="300" height="300"
+    data-ticks="circles"
+    data-outer-color="green"
+    data-color="#ff5"
+    data-background="black, red, green, blue, black"
+    data-numerals="roman"
+    data-font-family="comic sans ms"
+    data-type="analog"
+    data-gradient="0,0,0,300"&gt;
+    Canvas not sopported. Update browser.
+&lt;/canvas&gt;
+			</code></pre>
+        </td>
+    </tr>
+    <tr>
+    	<td>The same as above in digital</td>
+    	<td>
+            <canvas class="clockClass" width="300" height="100"
+                data-color="#ff5"
+                data-background="black, red, green, blue, black"
+                data-font-family="comic sans ms"
+                data-type="digital"
+                data-gradient="0,0,0,100">
+                Canvas not sopported. Update browser.
+            </canvas>
+        </td>
+        <td>
+        	The same as above with <i><strong>data-type="digital"</strong></i> and <i><strong>height="100"</strong></i>
+        </td>
+    </tr>
+</table>
+
+<hr/>
+
+<table>
+    <tr><th colspan="2">Javascript sample code used in this page to run the clocks</th></tr>
+    <tr>
+    	<td>
+<pre><code>var clockHandler;
+
+window.onload = function()
+{
+    clockHandler = <u>new Clock( 20/*, "clockClass"*/ )</u>;
+    clockHandler.<u>startStop()</u>;
+}</code></pre>
+        </td>
+        <td>
+        	<p>'Clock' constructor has the format <strong><i>Clock( [refreshRate[,className]] )</i></strong>.</p>
+            <p>
+            	There are two public methods, 
+                <ul style="list-style-type:">
+                	<li><strong><i>startStop()</i></strong>, which starts/stops all clocks in the page</li>
+                	<li><strong><i>isRunning()</i></strong>, which checks if clocks are running</li>
+                </ul>
+            </p>
+        </td>
+    </tr>
+</table>
+
+<hr/>
+
+<table>
+	<tr><th width="400px">Generator</th><th>Clock</th><th width="400px">HTML5 Code</th></tr>
+    <tr>
+    	<td>
+        	<p>
+               	<label for="width">Size</label>
+                <input type="number" id="width" min="5" max="10000" value="300" step="5" size="5" oninput="generate()"/>
+               	<label for="height">x</label>
+                <input type="number" id="height" min="5" max="10000" value="300" step="5" size="5" oninput="generate()"/>
+            </p>
+        	<p>
+                <label for="type">Type</label>
+                <select id="type" onchange="generate()"/>
+                  <option value="analog">analog</option>
+                  <option value="digital">digital</option>
+                </select>
+            </p>
+			<p>
+                <label for="ticks">Ticks</label>
+                <select id="ticks" onchange="generate()"/>
+                  <option value="none">none</option>
+                  <option value="lines">lines</option>
+                  <option value="circles">circles</option>
+                </select>
+            </p>        	
+			<p>
+                <label for="numerals">Numerals</label>
+                <select id="numerals" onchange="generate()"/>
+                  <option value="none">none</option>
+                  <option value="roman">roman</option>
+                  <option value="arabic">arabic</option>
+                </select>
+            </p>        	
+        	<p>
+               	<label for="fontFamily">Font Family</label>
+                <input type="text" id="fontFamily" value="Arial" oninput="generate()"/>
+            </p>
+            <p>
+               	<label for="color">Color</label>
+                <input type="text" id="color" oninput="generate()"/>
+            	<input type="color" id="cpColor"/>
+            </p>
+            <p>
+               	<label for="background">Background</label>
+                <input type="text" id="background" oninput="generate()"/>
+            	<input type="color" id="cpBackground"/>
+            </p>
+        	<p>
+               	<label for="gradient">Gradient</label>
+                <input type="text" id="gradient" oninput="generate()"/>
+            </p>
+            <p>
+               	<label for="outerColor">Outer color</label>
+                <input type="text" id="outerColor" oninput="generate()"/>
+            	<input type="color" id="cpOuterColor"/>
+            </p>
+		</td>
+        <td id="tdGenerator" style="text-align: center"></td>
+        <td id="tdCode"></td>
+	</tr>
+</table>
+
+<input type="button" id="btnStartStop" value="Start/Stop clocks" onClick="clockHandler.startStop();"/>
+
+</body>
+
+</html>
