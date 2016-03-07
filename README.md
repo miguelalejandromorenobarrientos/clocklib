@@ -1,5 +1,5 @@
 # clocklib
-Customizable HTML5 clocks
+javascript/HTML5 customizable clocks library
 
 ============================================================================================
 Clocklib, a Javascript library to put customizable analog/digital clocks in a page
